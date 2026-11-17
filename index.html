@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#050a18" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <title>Promo ERP — Synchronize Your Entire Operation in Real-Time</title>
+    <meta
+      name="description"
+      content="Promo ERP unifies inventory, production, finance, HR and sales into one real-time platform — open-source core, on your own servers, with zero per-user licensing."
+    />
+    <meta property="og:title" content="Promo ERP — Synchronize Your Entire Operation" />
+    <meta
+      property="og:description"
+      content="An all-in-one Business Automation and ERP platform. Open-source core, on-premise deployment, 24/7 engineering support."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#platform">Skip to content</a>
+
+    <!-- Shared logo mark -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#3b82f6" />
+          <stop offset="1" stop-color="#22d3ee" />
+        </linearGradient>
+        <symbol id="logoMark" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="9" fill="url(#logoGrad)" />
+          <path
+            d="M11.5 24V8.5h6.2a5 5 0 0 1 0 10h-3.4"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader" role="status" aria-live="polite">
+      <div class="loader__inner">
+        <svg class="loader__mark"><use href="#logoMark" /></svg>
+        <span class="loader__name">Promo ERP</span>
+        <span class="loader__bar"><i></i></span>
+        <span class="loader__hint">Synchronizing dimensions…</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a class="logo" href="#top" aria-label="Promo ERP home">
+          <svg class="logo__mark"><use href="#logoMark" /></svg>
+          <span class="logo__text">Promo<span>ERP</span></span>
+        </a>
+
+        <nav class="nav__links" id="navLinks" aria-label="Primary">
+          <a href="#platform">Platform</a>
+          <a href="#tools">Tools</a>
+          <a href="#ai">AI</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a class="btn btn--ghost btn--sm nav__login" href="#contact">Get started</a>
+          <a class="btn btn--solid btn--sm" href="#contact">Book a demo</a>
+          <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero__inner" id="heroContent">
+          <p class="eyebrow" data-reveal>Enterprise Resource Planning · Lahore, Pakistan</p>
+          <h1 class="hero__title" data-reveal>
+            Synchronize your<br />
+            entire operation<br />
+            <span class="grad">in real time.</span>
+          </h1>
+          <p class="hero__sub" data-reveal>
+            Promo ERP unifies inventory, production, finance, HR and sales into one live platform.
+            Open-source core, deployed on your own servers, with zero per-user licensing.
+          </p>
+          <div class="hero__cta" data-reveal>
+            <a class="btn btn--solid" href="#contact">Book a demo</a>
+            <a class="btn btn--ghost" href="#tools">Explore 21 tools</a>
+          </div>
+          <div class="hero__meta" data-reveal>
+            <span>100% open-source ownership</span>
+            <i></i>
+            <span>On-premise or private cloud</span>
+            <i></i>
+            <span>24/7 SLA support</span>
+          </div>
+        </div>
+
+        <a class="scroll" href="#platform" aria-label="Scroll to platform">
+          <span>Scroll</span>
+          <span class="scroll__mouse"><i></i></span>
+        </a>
+      </section>
+
+      <!-- Stats -->
+      <section class="stats-band" aria-label="Key numbers">
+        <div class="container stats" id="stats"></div>
+      </section>
+
+      <!-- Platform -->
+      <section class="section" id="platform">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">The platform</p>
+            <h2>Built to streamline<br /><span class="grad">every operation.</span></h2>
+            <p class="section__sub">
+              An all-in-one business automation and ERP platform built to eliminate inefficiencies
+              and boost profitability — not add another dashboard nobody opens.
+            </p>
+          </div>
+          <div class="grid grid--3" id="featuresGrid"></div>
+        </div>
+      </section>
+
+      <!-- Industries -->
+      <section class="section" id="industries">
+        <div class="container">
+          <div class="section__head section__head--left" data-reveal>
+            <p class="eyebrow">Tailored for your industry</p>
+            <h2>Whatever your sector,<br /><span class="grad">Promo ERP adapts.</span></h2>
+          </div>
+          <div class="industries" id="industriesGrid"></div>
+        </div>
+      </section>
+
+      <!-- Tools -->
+      <section class="section" id="tools">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">Open-source tools hub</p>
+            <h2>Test-drive real software.<br /><span class="grad">No sales gauntlet.</span></h2>
+            <p class="section__sub">
+              Production-grade ERP, CRM, HR, accounting and project software, hosted and ready.
+              Request sandbox credentials on WhatsApp and start in minutes.
+            </p>
+          </div>
+          <div class="tool-filters" id="toolFilters" data-reveal></div>
+          <div class="grid grid--3 tools" id="toolsGrid"></div>
+          <p class="tools__note" data-reveal>
+            Credentials are issued on request — email
+            <a href="mailto:promoerp786@gmail.com">promoerp786@gmail.com</a> or message
+            <a href="https://wa.me/923004439445" target="_blank" rel="noopener">+92 300 4439445</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- AI -->
+      <section class="section" id="ai">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">AI automations</p>
+            <h2>AI on top of<br /><span class="grad">your private data.</span></h2>
+            <p class="section__sub">
+              Because your operational databases live on your own hardware, you can run genuine
+              industrial AI — private, on-premise and never sent to a public cloud.
+            </p>
+          </div>
+          <div class="grid grid--3" id="aiGrid"></div>
+
+          <div class="agentic" data-reveal>
+            <div class="agentic__head">
+              <p class="eyebrow">Enterprise automation tier</p>
+              <h3>Layer agentic AI on top of your enterprise data.</h3>
+            </div>
+            <div class="agentic__grid" id="agenticGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Maturity -->
+      <section class="section" id="maturity">
+        <div class="container">
+          <div class="section__head section__head--left" data-reveal>
+            <p class="eyebrow">The 8-level maturity framework</p>
+            <h2>Where does your business<br /><span class="grad">actually stand?</span></h2>
+            <p class="section__sub">
+              A Level 1 paper-ledger business and a Level 6 ERP-running business are not the same
+              project. We tell you honestly where you are and what comes next.
+            </p>
+          </div>
+          <div class="maturity" id="maturityGrid"></div>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="section" id="methodology">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">Implementation first</p>
+            <h2>A proven 4-step<br /><span class="grad">deployment method.</span></h2>
+            <p class="section__sub">
+              Most ERP projects fail because software is dumped on untrained staff. We follow a
+              disciplined engineering path to guarantee real adoption on the floor.
+            </p>
+          </div>
+          <div class="method" id="methodGrid"></div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">Packages</p>
+            <h2>Scale without<br /><span class="grad">losing control.</span></h2>
+            <p class="section__sub">
+              Flexible options designed to grow with your organisation. Talk to us for a scoped quote.
+            </p>
+          </div>
+          <div class="pricing" id="pricingGrid"></div>
+          <p class="pricing__note" data-reveal>
+            The software core is 100% free and open-source. Promo ERP's fees cover deployment
+            discipline, workflow blueprinting, localised fiscal integration and dedicated engineering.
+          </p>
+        </div>
+      </section>
+
+      <!-- Integrations -->
+      <section class="section" id="integrations">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">Enterprise connectivity</p>
+            <h2>Connects to the stack<br /><span class="grad">you already run.</span></h2>
+          </div>
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee__track" id="marqueeTrack"></div>
+          </div>
+          <div class="grid grid--3" id="integrationGroups"></div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact">
+            <div class="contact__copy" data-reveal>
+              <p class="eyebrow">Let's talk</p>
+              <h2>Let's discuss<br /><span class="grad">your ERP needs.</span></h2>
+              <p class="section__sub">
+                Whether you need a complete ERP, custom development or have questions about our
+                services, our engineers in Lahore are here to help.
+              </p>
+              <div class="contact__info" id="contactInfo"></div>
+              <div class="contact__cta">
+                <a class="btn btn--solid" href="https://wa.me/923218833616" target="_blank" rel="noopener">
+                  Message on WhatsApp
+                </a>
+                <a class="btn btn--ghost" href="mailto:promoerp786@gmail.com">Email us</a>
+              </div>
+              <p class="contact__note">
+                Mobile testing available — a standalone Android/iOS APK can be provided on request.
+              </p>
+            </div>
+
+            <form class="contact__form card" id="contactForm" data-reveal novalidate>
+              <h3>Send us a message</h3>
+              <p class="contact__form-sub">We'll get back to you within 24 hours.</p>
+              <div class="field">
+                <label for="cf-name">Full name *</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="cf-email">Email *</label>
+                  <input id="cf-email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div class="field">
+                  <label for="cf-phone">Phone</label>
+                  <input id="cf-phone" name="phone" type="tel" autocomplete="tel" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="cf-subject">Subject *</label>
+                <input id="cf-subject" name="subject" type="text" required />
+              </div>
+              <div class="field">
+                <label for="cf-message">Message *</label>
+                <textarea id="cf-message" name="message" rows="4" required></textarea>
+              </div>
+              <button class="btn btn--solid btn--full" type="submit">Send message</button>
+              <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a class="logo" href="#top">
+            <svg class="logo__mark"><use href="#logoMark" /></svg>
+            <span class="logo__text">Promo<span>ERP</span></span>
+          </a>
+          <p>
+            A dedicated Enterprise Resource Planning provider specialising in scalable, secure
+            solutions for businesses of every size — with an open-source core.
+          </p>
+          <div class="footer__social" id="footerSocial"></div>
+        </div>
+        <div class="footer__col">
+          <h4>Quick links</h4>
+          <a href="#platform">Platform</a>
+          <a href="#tools">Tools hub</a>
+          <a href="#ai">AI automations</a>
+          <a href="#pricing">Packages</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="mailto:promoerp786@gmail.com">promoerp786@gmail.com</a>
+          <a href="mailto:info@promoerp.it">info@promoerp.it</a>
+          <a href="tel:+923218833616">+92 321 8833616</a>
+          <a href="https://wa.me/923218833616" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="footer__col">
+          <h4>Elsewhere</h4>
+          <a href="https://promoerp.it" target="_blank" rel="noopener">promoerp.it</a>
+          <a href="https://promoautomations.vercel.app" target="_blank" rel="noopener">promoautomations</a>
+          <a href="https://sites.google.com/view/promoerp/home" target="_blank" rel="noopener">Google Site</a>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <p>© <span id="year"></span> Promo ERP. All rights reserved.</p>
+        <p class="footer__legal">
+          Open-source names and trademarks (ERPNext, Odoo, Manager.io, OrangeHRM, Plane, ProjeQtOr,
+          Taiga, Vikunja) belong to their respective owners. Design concept demo.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
